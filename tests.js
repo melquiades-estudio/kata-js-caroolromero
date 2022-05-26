@@ -3,17 +3,17 @@ const expect = chai.expect
 
 describe('Las variables en Javascript', () => {
   it('pueden contener strings', () => {
-    // Añade la línea que falta
-    const a = "Javascript"
+    
+    let a = "Javascript"
     expect(a).to.equal("Javascript");
   })
   it('pueden contener números', () => {
-    // Añade la línea que falta
+    let b = 14.64;    
 
-    expect(b).to.equal(14.64);
+    expect(b).to.equal(14.64)
   })
   it('pueden contener booleanos', () => {
-    // Añade la línea que falta
+    let c = false;    
 
     expect(c).to.equal(false);
   })
@@ -22,15 +22,14 @@ describe('Las variables en Javascript', () => {
 describe('Comparaciones en Javascript', () => {
     it("usando ===", () => {
         const number = 20;
-        //completa la asignación usando number y el comparador ===
+        let expresion = false;     
 
         expect(expresion).to.equal(false)
     })
 
     it("usando !==", () => {
         const language = "Javascript";
-        //completa la asignación usando language y el comparador !==
-
+        let expresion = false;
         expect(expresion).to.equal(false)
     })
 })
@@ -38,16 +37,18 @@ describe('Comparaciones en Javascript', () => {
 describe("Operaciones aritméticas", () => {
     it("Usando suma", () => {
         const a = 10;
+        const b = 90;
 
         expect(a+b).to.equal(100);
     })
     it("Usando multiplicación", () => {
         const a = 10;
-
+        const b = 1.3; 
         expect(a*b).to.equal(13);
     })
     it("Usando división", () => {
         const a = 10;
+        const b = 4;
 
         expect(a/b).to.equal(2.5);
     })
@@ -56,7 +57,8 @@ describe("Operaciones aritméticas", () => {
 describe('Algebra booleana', () => {
     it("Usando el operador AND (&&)", () => {
         const a = true;
-        //completa la asignación de b
+        //complceta la asignación de b
+        const b = a;
 
         const expression = a && b;
         expect(expression).to.equal(true);
@@ -64,7 +66,7 @@ describe('Algebra booleana', () => {
     it("Usando el operador OR (||)", () => {
         const a = false;
         //completa la asignación de b
-
+        const b = false;
         const expression = a || b;
         expect(expression).to.equal(false);
     })
@@ -91,6 +93,11 @@ describe("Variables en JS", () => {
     it("Completa todas las constantes que faltan", () => {
 
         const a = 10;
+        const b = 1.34;
+        const c = true;
+        const d = "Buenos días";
+        const e = "Pepe";
+        const f = "Buenos días, pepe";
 
         expect(a).to.equal(10);
         expect(b).to.equal(1.34);
@@ -103,6 +110,14 @@ describe("Variables en JS", () => {
     it("Completa todas las variables que faltan para que las operaciones resulten correctamente", () => {
 
         let a = 11;
+        let b = 0.34
+        let c = 10;
+        let d = 0;
+        let e = 340;
+        let f = 10;
+        let g = 3;
+        let x = 2;
+        let y = 3;
 
         expect(a + b).to.equal(11.34);
         expect(a * c).to.equal(110);
@@ -116,6 +131,10 @@ describe("Variables en JS", () => {
     it("Completa todas las variables que faltan para que se cumplan las condiciones", () => {
 
         let a = 10;
+        let b = 100;
+        let c = undefined;
+        let d = "Holita"
+        let n = "Guuudmorning"
 
         expect(a > 9).to.be.true;
         expect(a < 11).to.be.true;
@@ -139,7 +158,7 @@ describe("condicionales en javascript", () => {
         }
 
         // substituye ??? por el valor que tiene la variable "result"        
-        expect(result === "???").to.be.true;
+        expect(result === "KO").to.be.true;
     })
 
     it("comparando cadenas (strings)", () => {
@@ -155,7 +174,7 @@ describe("condicionales en javascript", () => {
         }
 
         // substituye ??? por el valor que tiene la variable "result"        
-        expect(result === "???").to.be.true;
+        expect(result === "pikachu").to.be.true;
     })
 
     it("Interpolación de cadenas (strings) (1)", () => {
@@ -172,7 +191,7 @@ describe("condicionales en javascript", () => {
         }
 
         // substituye ??? por el valor que tiene la variable "result"        
-        expect(result === "???").to.be.true;
+        expect(result === "Pizza con Pepperoni").to.be.true;
     })
 
     it("Interpolación de cadenas (strings) (2)", () => {
@@ -189,7 +208,7 @@ describe("condicionales en javascript", () => {
         }
 
         // substituye ??? por el valor que tiene la variable "result"        
-        expect(result === "???").to.be.true;
+        expect(result === "Pizza con Piña").to.be.true;
     })
 })
 
@@ -223,7 +242,7 @@ describe("Funciones en JS", () => {
 
 
         // substituye "???" por el valor que tiene la variable "result"        
-        expect(result === "???").to.be.true;
+        expect(result === 28).to.be.true;
     })
 
     it("Cuál es el resultado de invocar la función? (2)", () => {
@@ -232,16 +251,16 @@ describe("Funciones en JS", () => {
 
 
         // substituye "???" por el valor que tiene la variable "result"        
-        expect(result === "???").to.be.true;
+        expect(result === "Son Pinky y Cerebro").to.be.true;
     })
 
     it("Cuál es el resultado de invocar la función? (3)", () => {
 
         // substituye "???" por el resultado en cada caso
-        expect(h("khaleesi mother of dragons breaker of chains") === "???").to.be.true;
-        expect(h("sarah") === "???").to.be.true;
-        expect(h("bob") === "???").to.be.true;
-        expect(h("robertson") === "???").to.be.true;
+        expect(h("khaleesi mother of dragons breaker of chains") === "very long").to.be.true;
+        expect(h("sarah") === "adecquate").to.be.true;
+        expect(h("bob") === "too short").to.be.true;
+        expect(h("robertson") === "long").to.be.true;
     })
 
 })
@@ -251,19 +270,20 @@ describe("Colecciones en JS: Array", () => {
     it("Pueden crearse usando [ ]", () => {
 
         // crea un array "a" usando los corchetes []
-
+        let a = [true]
         expect(Array.isArray(a)).to.be.true;
     })
     it("Pueden crearse usando new Array", () => {
 
         // crea un array "a" usando el constructor "new"
-
+        let a = new Array 
         expect(Array.isArray(a)).to.be.true;
     })
     it("Pueden estar vacíos o contener elementos", () => {
 
         // crea un array que esté vacío y otro que no esté vacío
-
+        let emptyArray = [ ];
+        let nonEmptyArray = [1, 2];
         expect(emptyArray).to.be.empty;
         expect(nonEmptyArray).not.to.be.empty;
     })
@@ -272,8 +292,8 @@ describe("Colecciones en JS: Array", () => {
         let list = [10, "foo", true, "pepe"];
 
         // completa la definición que falta usando la propiedad length
-
-        expect("???").to.equal(4);
+      
+        expect(list.length).to.equal(4);
     })
     it("Nos permiten acceder a cada elemento del array", () => {
 
@@ -281,15 +301,16 @@ describe("Colecciones en JS: Array", () => {
 
         // sustituye "???" en cada caso para acceder al elemento correspondiente de la lista
 
-        expect("???").to.equal("Piña");
-        expect("???").to.equal("Melón");
+        expect(fruits[0]).to.equal("Piña");
+        expect(fruits[3]).to.equal("Melón");
     })
     it("Nos permiten modificar cada elemento", () => {
 
         let fruits = ["Piña", "Manzana", "Fresa", "Melón"]
 
         // Añade el código que permite modificar el elemento correspondiente
-
+        fruits[1] = 'Pera';
+ 
         expect(fruits).to.have.same.members(["Piña", "Pera", "Fresa", "Melón"])
     })
 
@@ -297,7 +318,7 @@ describe("Colecciones en JS: Array", () => {
         let fruits = ["Piña", "Manzana", "Fresa", "Melón"]
 
         // Añade el código que permite modificar la lista (incluyendo un elemento al final)
-
+        fruits.push("Pera");
         expect(fruits).to.have.same.members(["Piña", "Manzana", "Fresa", "Melón", "Pera"])
     })
 })
@@ -394,7 +415,8 @@ describe("Operaciones iterables", () => {
         let list = [1,5,7,9,11,13];
 
         // utiliza la función map para aplicar los números de la lista
-        list = "???";
+        
+        list = list.map( n => n-1 );
         
 
         expect(list).to.have.same.members([0,4,6,8,10,12]);
@@ -405,7 +427,8 @@ describe("Operaciones iterables", () => {
         let list = ["Pikachu", "Charmander", "Magikarp"];
 
         // utiliza la función map para aplicar los números de la lista y guardar la nueva lista en result
-                
+               expect([1, 2, 3]).to.have.same,members
+               
         expect(result).to.have.same.members([
             "Pikachu, te elijo a ti!",
             "Charmander, te elijo a ti!",
